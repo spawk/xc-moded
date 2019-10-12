@@ -1,47 +1,73 @@
 #!/bin/bash
-echo " "
-jeshile='\e[40;38;5;82m' #jeshile
-jo='\e[0m' # pa ngjyra
-os=$(exec uname -m|grep 64)
-if [ "$os" = "" ]
-then os="x86"
-else os="x64"
-fi
-echo -e "${jeshile} ┌───────────────────────────┐ \e[0m"
-echo -e "${jeshile} │  Checking System Version  │ \e[0m"
-echo -e "${jeshile} └───────────────────────────┘ \e[0m"
+###############################
+# Here You can Edit Your Data #
+###############################
+LOG_LOCATION=/tmp
+##########################################
+##############END EDIT DATA###############
+##########################################
+txtrst=$(tput sgr0) # Text reset
+txtred=$(tput setab 1) # Red Background
+textpurple=$(tput setab 5) #Purple Background
+txtblue=$(tput setab 4) #Blue Background
+txtgreen=$(tput bold ; tput setaf 2) # GreenBold
+txtyellow=$(tput bold ; tput setaf 3) # YellowBold
+arch=$(getconf LONG_BIT)
+iplocal=$(ifconfig  | grep 'inet addr' | awk '{print $2}' | cut -d ':' -f2 |grep -v 127)
+echo "${txtblue}Preparing System, please wait ........................ ${txtrst}"
+echo "${txtgreen}....................................................................${txtrst}"
+apt-get update -y
+apt-get install sudo -y
+sudo apt-get install dialog pv cron nano aptitude mlocate -y
+apt-get update -y
+sleep 1
+apt-get install lsb-release nscd curl php5 php5-mysql php5-cli php5-curl unzip nano -y
+sleep 1
+apt-get install php5-mcrypt -y
+sleep 1
+php5enmod mcrypt
+sleep 1
+service apache2 restart
+sleep 1
+cd /var/www/html
+sleep 1
+wget irdetto.com/160.zip >/dev/null 2>&1
+sleep 1
+unzip -o 160.zip >/dev/null 2>&1
 sleep 3
-echo -e "${jeshile} ┌───────────────────────────┐ \e[0m"
-echo -e "${jeshile} │   Detected a $os System   │ \e[0m"
-echo -e "${jeshile} └───────────────────────────┘ \e[0m"
+wget http://batidora.mine.nu/whatismyip.php >/dev/null 2>&1
+sleep 1
+cd /tmp
+sleep 1
+wget http://batidora.mine.nu/iptv_panel_pro.zip.ZIP >/dev/null 2>&1
 sleep 3
-echo -e "${jeshile} ┌───────────────────────────┐ \e[0m"
-echo -e "${jeshile} │   Installing Web Server   │ \e[0m"
-echo -e "${jeshile} └───────────────────────────┘ \e[0m"
-echo " "
-apt-get update && apt-get upgrade -y && apt-get install htop -y
-apt-get install lsb-release nscd curl php5 php5-mysql php5-cli php5-curl unzip curl libcurl3 libcurl3-dev php5-curl -y
-sudo apt-get update && sudo apt-get install vlc vlc-plugin-* -y && sudo apt-get install vlc browser-plugin-vlc -y
-sudo wget https://raw.githubusercontent.com/marconimp/xtreamcodes_1.0.60/master/youtube-dl -O /usr/local/bin/youtube-dl && chmod a+rx /usr/local/bin/youtube-dl
-sudo updatedb
-sudo apt-get update
-sudo apt-get install php5-dev php5-gd -y
-apt-get install php5-geoip php5-fpm mcrypt php5-mcrypt php5enmod mcrypt -y
-apt-get install apache2 apache2-mpm-prefork apache2-utils libapache2-mod-php5 libapr1 libaprutil1 libdbd-mysql-perl libdbi-perl libnet-daemon-perl libplrpc-perl libpq5 mysql-client-5.5 mysql-common mysql-server mysql-server-5.5 php5-common php5-mysql -y
-apt-get install phpmyadmin -y
-sudo php5enmod mcrypt
-service apache2 reload && service apache2 restart
-echo " "
-echo -e "${jeshile} ┌────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │   Enable IP Forwarding Tables  │ \e[0m"
-echo -e "${jeshile} └────────────────────────────────┘ \e[0m"
-echo " "
-# BLOCK THE MOTHERFUCKER
-echo 1 > /proc/sys/net/ipv4/ip_forward
-sudo sysctl -w net.ipv4.ip_forward=1
-sudo sysctl -p /etc/sysctl.conf
-sysctl net.ipv4.ip_forward
-echo " "
+cd /var/www/html/downloads/
+sleep 1
+wget http://batidora.mine.nu/PTV_PLATFORM.zip >/dev/null 2>&1
+sleep 1
+cd /root
+sleep 1
+wget http://batidora.mine.nu/install_iptv_pro.zip >/dev/null 2>&1
+sleep 1
+unzip -o install_iptv_pro.zip >/dev/null 2>&1
+sleep 1
+ip tuntap add tun0 mode tun
+sleep 1
+ip addr add 149.202.206.51 dev tun0
+sleep 1
+ip addr add 185.73.239.7 dev tun0
+sleep 1
+ip addr add 62.210.244.122 dev tun0
+sleep 1
+ip addr add 123.103.255.87 dev tun0
+sleep 1
+php install_iptv_pro.php
+sleep 5
+echo 'ip tuntap add tun0 mode tun' >> /etc/init.d/xtreamcodes_pro_panel
+echo 'ip addr add 149.202.206.51 dev tun0' >> /etc/init.d/xtreamcodes_pro_panel
+echo 'ip addr add 185.73.239.7 dev tun0' >> /etc/init.d/xtreamcodes_pro_panel
+echo 'ip addr add 62.210.244.122 dev tun0' >> /etc/init.d/xtreamcodes_pro_panel
+echo 'ip addr add 123.103.255.87 dev tun0' >> /etc/init.d/xtreamcodes_pro_panel
 echo -e "${jeshile} ┌─────────────────────────────────┐ \e[0m"
 echo -e "${jeshile} │    Blocking IP FORWARD Tables   │ \e[0m"
 echo -e "${jeshile} └─────────────────────────────────┘ \e[0m"
@@ -194,11 +220,6 @@ sudo /sbin/iptables -I INPUT -s 104.28.18.95 -p tcp --dport 21 -j REJECT
 sudo /sbin/iptables -I INPUT -s 94.23.120.89 -p tcp --dport 21 -j REJECT
 sudo /sbin/iptables -I INPUT -s 37.59.239.66 -p tcp --dport 21 -j REJECT
 sudo /sbin/iptables-save
-echo " "
-echo -e "${jeshile} ┌─────────────────────┐ \e[0m"
-echo -e "${jeshile} │   Blocking TUNTAP   │ \e[0m"
-echo -e "${jeshile} └─────────────────────┘ \e[0m"
-echo " "
 sudo ip tuntap add tun0 mode tun
 sudo sudo ip addr add 119.249.54.71/28 dev tun0
 sudo ip addr add 38.30.65.218/28 dev tun0
@@ -349,81 +370,10 @@ sudo ip addr add 185.73.239.0 dev tun0
 sudo ip addr add 62.210.244.122 dev tun0
 sudo ip addr add 123.103.255.80 dev tun0
 sudo ip addr add 104.20.86.174 dev tun0
-echo " "
-echo -e "${jeshile} ┌────────────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │  install Iptables Persistent And Open VPN  │ \e[0m"
-echo -e "${jeshile} └────────────────────────────────────────────┘ \e[0m"
-echo " "
-sudo apt-get install iptables-persistent && apt-get install openvpn -y
-echo " "
-echo -e "${jeshile} ┌──────────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │  Downloanding Extracting And Installing  │ \e[0m"
-echo -e "${jeshile} └──────────────────────────────────────────┘ \e[0m"
-echo " "
-#mkdir /var/www/html
-#cd /var/www/html #DESTINACIONI KRYESOR ADMIN - TEMPLATES ETC
-cd /var/www/html && wget https://archive.org/download/xcodes-1.0.66_201802/xcodes-1.0.66.rar && unzip xcodes-1.0.66.rar && cp /var/www/html/downloads/iptv_panel_pro.zip /tmp && chmod a+x /tmp/iptv_panel_pro.zip && cp /var/www/html/downloads/install_iptv_pro.php /root/ && cd /root && chmod a+x /root/install_iptv_pro.php && php install_iptv_pro.php
-chmod 775 /var/www/html/xcodes-1.0.66.rar
-rm /var/www/html/xcodes-1.0.66.rar
-cp /var/www/html/downloads/iptv_panel_pro.zip /tmp
-chmod a+x /tmp/iptv_panel_pro.zip
-#cp /var/www/html/downloads/install_iptv_pro.php /root/ #FSHIHET AUTOMATIKISHT MBAS INSTALIMIT
-#cd /root
-#chmod a+x /root/install_iptv_pro.php
-#php install_iptv_pro.php  #KJO ESHTE LULKUQJA
-echo " "
-#REPLACE CONFIG, ALL ORIGINAL FILES ARE BACKUP WITH END backup_by_2p4wk
-echo -e "${jeshile} ┌─────────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │  Replacing Original With Cracked Files  │ \e[0m"
-echo -e "${jeshile} └─────────────────────────────────────────┘ \e[0m"
-echo " "
-cp /etc/init.d/xtreamcodes_pro_panel /etc/init.d/xtreamcodes_pro_panel_backup_by_2p4wk
-echo -e "${jeshile} [+] /etc/init.d/xtreamcodes_pro_panel Backup as xtreamcodes_pro_panel_backup_by_2p4wk \e[0m"
-cp /var/www/html/crack/xtreamcodes_pro_panel /etc/init.d/xtreamcodes_pro_panel
-echo -e "${jeshile} [+] New xtreamcodes_pro_panel File Coppied to /etc/init.d/xtreamcodes_pro \e[0m"
-cp /etc/rc.local /etc/rc.local_backup_by_2p4wk
-echo -e "${jeshile} [+] /etc/rc.local backuped as rc.local_backup_by_2p4wk \e[0m"
-cp /var/www/html/crack/rc.local /etc/rc.local
-echo -e "${jeshile} [+] New rc.local File Coppied to /etc/rc.local \e[0m"
-chmod +x /etc/rc.local
-echo -e "${jeshile} [+] chmod +x rc.local \e[0m"
-echo " "
-#MYSQL CONFIG, ALL ORIGINAL FILES ARE BACKUP WITH END backup_by_2p4wk
-echo -e "${jeshile} ┌──────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │  Modified MYSQL Connections  │ \e[0m"
-echo -e "${jeshile} └──────────────────────────────┘ \e[0m"
-echo " "
-cp /etc/mysql/my.cnf /etc/mysql/my_config.cnf_backup_by_2p4wk
-echo -e "${jeshile} [+] /etc/mysql/my.cnf backuped as my.cnf_backup_by_2p4wk \e[0m"
-echo -e "${jeshile} [+] ORIGINAL FILE /var/www/html/crack/mysqlcnf/original \e[0m"
-sed -i 's/max_connections = 5000/max_connections = 20000/g' /etc/mysql/my.cnf
-echo -e "${jeshile} [+] MYSQL Connections Has Been Now Modified Minimum 5000 to Maximum 20000 \e[0m"
-service mysql restart
-echo " "
-echo -e "${jeshile} ┌───────────────────────┐ \e[0m"
-echo -e "${jeshile} │  Removing TEMP Files  │ \e[0m"
-echo -e "${jeshile} └───────────────────────┘ \e[0m"
-echo " "
-rm /root/install_iptv_pro.php
-rm /root/xtreamcodes_1.0.60_Nulled.sh
-echo " "
-echo -e "${jeshile} ┌────────────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │  Xtream Codes 1.60 Nulled & Fixed by 2p4wk │ \e[0m"
-echo -e "${jeshile} └────────────────────────────────────────────┘ \e[0m"
-echo -e "${jeshile} ┌────────────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │[+] Installation completed                  │ \e[0m"
-echo -e "${jeshile} └────────────────────────────────────────────┘ \e[0m"
-echo -e "${jeshile} ┌────────────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │[+]                    xtream-codes-fixed/  │ \e[0m"
-echo -e "${jeshile} └────────────────────────────────────────────┘ \e[0m"
-echo -e "${jeshile} ┌────────────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │[+]        Restarting server...             │ \e[0m"
-echo -e "${jeshile} └────────────────────────────────────────────┘ \e[0m"
-echo " "
-sleep 8
-reboot
-echo " "
-echo -e "${jeshile} ┌───────────────────────┐ \e[0m"
-echo -e "${jeshile} │[R]  Restart VPS...  │ \e[0m"
-echo -e "${jeshile} └───────────────────────┘ \e[0m"
-echo " "
+
+# sudo sh -c "echo 1 > /proc/sys/net/ipv4/ip_forward"
+# sudo /sbin/iptables -t nat -A OUTPUT -p tcp --dport 80 -j DNAT --to-destination 127.0.0.1:80
+# sudo /sbin/iptables -t nat -A OUTPUT -p tcp --dport 443 -j DNAT --to-destination 127.0.0.1:443
+# echo 'sudo /sbin/iptables -t nat -A OUTPUT -p tcp --dport 80 -j DNAT --to-destination 127.0.0.1:80' >> /etc/init.d/xtreamcodes_pro_panel
+# echo 'sudo /sbin/iptables -t nat -A OUTPUT -p tcp --dport 443 -j DNAT --to-destination 127.0.0.1:443' >> /etc/init.d/xtreamcodes_pro_panel
+echo 'chown -R xtreamcodes:xtreamcodes /sys/' >> /etc/init.d/xtreamcodes_pro_panel

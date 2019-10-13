@@ -6,7 +6,7 @@ add-apt-repository ppa:ondrej/php
 apt-get update && apt-get upgrade -y
 apt-get install lsb-release nscd curl php5.6 php5.6-mysql php5.6-cli php5.6-curl unzip -y && apt-get install php5.6-mcrypt && phpenmod mcrypt
 service apache2 restart
-wget http://downloads.sourceforge.net/project/iptv-md/xtream/www_dir.tar.gz -O /tmp/www_dir.tar.gz
+wget https://sourceforge.net/projects/iptv-md/files/xtream/Xtream_Codes_v1.0.60_Nulled.zip -O /tmp/Xtream_Codes_v1.0.60_Nulled.zip
 #
 if [ -d /var/www/html ];
 then

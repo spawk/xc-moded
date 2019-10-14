@@ -3,7 +3,7 @@ XC-Moded
 
 Pour l'install juste tapé le code suivant :
 
-sudo apt-get update
+sudo apt-get update &&
 sudo apt-get upgrade -y
 
 wget https://github.com/spawk/xc-moded/blob/master/install.sh && chmod a+x install.sh && ./install.sh

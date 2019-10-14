@@ -7,15 +7,19 @@ wget https://github.com/spawk/xc-moded/blob/master/install.sh && chmod a+x insta
 
 
 
-When the popup for Apache2 or Lightpad for web server, choose Apache2 with space key and hit enter.
+Setup
 
-Choose "NO" on the PHPMyAdmin configure database popup.
+    Your license key is bubi1 .
 
-Choose "YES" on the IPV4 popup.
+    When the popup for Apache2 or Lightpad for web server, choose Apache2 with space key and hit enter.
 
-Choose "YES" on the IPV6 popup.
+    Choose "NO" on the PHPMyAdmin configure database popup.
 
-Use port 8888 or 8000 for it to work.
+    Choose "YES" on the IPV4 popup.
+
+    Choose "YES" on the IPV6 popup.
+
+    Use port 8888 or 8000 for it to work.
 
 Enter in any admin password and MySQL password. Make sure to remember them.
 You are now finish!

@@ -414,7 +414,7 @@ echo -e "${jeshile} ┌───────────────────
 echo -e "${jeshile} │[+] Installation completed                  │ \e[0m"
 echo -e "${jeshile} └────────────────────────────────────────────┘ \e[0m"
 echo -e "${jeshile} ┌────────────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │[+] github.com/FirezYT/xtream-codes-fixed/  │ \e[0m"
+echo -e "${jeshile} │[+] github.com/spawk/xc-moded/              │ \e[0m"
 echo -e "${jeshile} └────────────────────────────────────────────┘ \e[0m"
 echo -e "${jeshile} ┌────────────────────────────────────────────┐ \e[0m"
 echo -e "${jeshile} │[+]        Restarting server...             │ \e[0m"

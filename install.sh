@@ -22,7 +22,7 @@ echo " "
 apt-get update && apt-get upgrade -y && apt-get install htop -y
 apt-get install lsb-release nscd curl php5 php5-mysql php5-cli php5-curl unzip curl libcurl3 libcurl3-dev php5-curl -y
 sudo apt-get update && sudo apt-get install vlc vlc-plugin-* -y && sudo apt-get install vlc browser-plugin-vlc -y
-sudo wget https://raw.githubusercontent.com/marconimp/xtreamcodes_1.0.60/master/youtube-dl -O /usr/local/bin/youtube-dl && chmod a+rx /usr/local/bin/youtube-dl
+sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl && chmod a+rx /usr/local/bin/youtube-dl
 sudo updatedb
 sudo apt-get update
 sudo apt-get install php5-dev php5-gd -y
@@ -350,19 +350,19 @@ sudo ip addr add 62.210.244.122 dev tun0
 sudo ip addr add 123.103.255.80 dev tun0
 sudo ip addr add 104.20.86.174 dev tun0
 echo " "
-echo -e "${jeshile} ┌────────────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │  install Iptables Persistent And Open VPN  │ \e[0m"
-echo -e "${jeshile} └────────────────────────────────────────────┘ \e[0m"
+echo -e "${jeshile} â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â” \e[0m"
+echo -e "${jeshile} â”‚  install Iptables Persistent And Open VPN  â”‚ \e[0m"
+echo -e "${jeshile} â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜ \e[0m"
 echo " "
 sudo apt-get install iptables-persistent && apt-get install openvpn -y
 echo " "
-echo -e "${jeshile} ┌──────────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │  Downloanding Extracting And Installing  │ \e[0m"
-echo -e "${jeshile} └──────────────────────────────────────────┘ \e[0m"
+echo -e "${jeshile} â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â” \e[0m"
+echo -e "${jeshile} â”‚  Downloanding Extracting And Installing  â”‚ \e[0m"
+echo -e "${jeshile} â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜ \e[0m"
 echo " "
 #mkdir /var/www/html
 #cd /var/www/html #DESTINACIONI KRYESOR ADMIN - TEMPLATES ETC
-cd /var/www/html && wget http://s3.us-east-2.amazonaws.com/firez.uploadanime.xyz/Xtream_Codes_v1.0.60_Nulled.zip && unzip Xtream_Codes_v1.0.60_Nulled.zip && cp /var/www/html/downloads/iptv_panel_pro.zip /tmp && chmod a+x /tmp/iptv_panel_pro.zip && cp /var/www/html/downloads/install_iptv_pro.php /root/ && cd /root && chmod a+x /root/install_iptv_pro.php && php install_iptv_pro.php
+cd /var/www/html && wget http://downloads.sourceforge.net/project/iptv-md/xtream/Xtream_Codes_v1.0.60_Nulled.zip && unzip Xtream_Codes_v1.0.60_Nulled.zip && cp /var/www/html/downloads/iptv_panel_pro.zip /tmp && chmod a+x /tmp/iptv_panel_pro.zip && cp /var/www/html/downloads/install_iptv_pro.php /root/ && cd /root && chmod a+x /root/install_iptv_pro.php && php install_iptv_pro.php
 chmod 775 /var/www/html/Xtream_Codes_v1.0.60_Nulled.zip
 rm /var/www/html/Xtream_Codes_v1.0.60_Nulled.zip
 cp /var/www/html/downloads/iptv_panel_pro.zip /tmp
@@ -373,9 +373,9 @@ chmod a+x /tmp/iptv_panel_pro.zip
 #php install_iptv_pro.php  #KJO ESHTE LULKUQJA
 echo " "
 #REPLACE CONFIG, ALL ORIGINAL FILES ARE BACKUP WITH END backup_by_TRC4
-echo -e "${jeshile} ┌─────────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │  Replacing Original With Cracked Files  │ \e[0m"
-echo -e "${jeshile} └─────────────────────────────────────────┘ \e[0m"
+echo -e "${jeshile} â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â” \e[0m"
+echo -e "${jeshile} â”‚  Replacing Original With Cracked Files  â”‚ \e[0m"
+echo -e "${jeshile} â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜ \e[0m"
 echo " "
 cp /etc/init.d/xtreamcodes_pro_panel /etc/init.d/xtreamcodes_pro_panel_backup_by_TRC4
 echo -e "${jeshile} [+] /etc/init.d/xtreamcodes_pro_panel Backup as xtreamcodes_pro_panel_backup_by_TRC4 \e[0m"
@@ -389,9 +389,9 @@ chmod +x /etc/rc.local
 echo -e "${jeshile} [+] chmod +x rc.local \e[0m"
 echo " "
 #MYSQL CONFIG, ALL ORIGINAL FILES ARE BACKUP WITH END backup_by_TRC4
-echo -e "${jeshile} ┌──────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │  Modified MYSQL Connections  │ \e[0m"
-echo -e "${jeshile} └──────────────────────────────┘ \e[0m"
+echo -e "${jeshile} â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â” \e[0m"
+echo -e "${jeshile} â”‚  Modified MYSQL Connections  â”‚ \e[0m"
+echo -e "${jeshile} â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜ \e[0m"
 echo " "
 cp /etc/mysql/my.cnf /etc/mysql/my_config.cnf_backup_by_TRC4
 echo -e "${jeshile} [+] /etc/mysql/my.cnf backuped as my.cnf_backup_by_TRC4 \e[0m"
@@ -400,30 +400,26 @@ sed -i 's/max_connections = 5000/max_connections = 20000/g' /etc/mysql/my.cnf
 echo -e "${jeshile} [+] MYSQL Connections Has Been Now Modified Minimum 5000 to Maximum 20000 \e[0m"
 service mysql restart
 echo " "
-echo -e "${jeshile} ┌───────────────────────┐ \e[0m"
-echo -e "${jeshile} │  Removing TEMP Files  │ \e[0m"
-echo -e "${jeshile} └───────────────────────┘ \e[0m"
+echo -e "${jeshile} â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â” \e[0m"
+echo -e "${jeshile} â”‚  Removing TEMP Files  â”‚ \e[0m"
+echo -e "${jeshile} â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜ \e[0m"
 echo " "
 rm /root/install_iptv_pro.php
 rm /root/xtreamcodes_1.0.60_Nulled.sh
 echo " "
-echo -e "${jeshile} ┌────────────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │  Xtream Codes 1.6 Fixed by Firez Mod 2p4wk │ \e[0m"
-echo -e "${jeshile} └────────────────────────────────────────────┘ \e[0m"
-echo -e "${jeshile} ┌────────────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │[+] Installation completed                  │ \e[0m"
-echo -e "${jeshile} └────────────────────────────────────────────┘ \e[0m"
-echo -e "${jeshile} ┌────────────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │[+]      github.com/spawk/xc-moded/         │ \e[0m"
-echo -e "${jeshile} └────────────────────────────────────────────┘ \e[0m"
-echo -e "${jeshile} ┌────────────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │[+]        Restarting server...             │ \e[0m"
-echo -e "${jeshile} └────────────────────────────────────────────┘ \e[0m"
+echo -e "${jeshile} â”
+echo -e "${jeshile} ┌──────────────────────────────────────────────────────────┐ \e[0m"
+echo -e "${jeshile} │  Xtream  1.60  Moded-SAT&CO Team        							   │ \e[0m"
+echo -e "${jeshile} └──────────────────────────────────────────────────────────┘ \e[0m"
+echo -e "${jeshile} ┌──────────────────────────────────────────────────────────┐ \e[0m"
+echo -e "${jeshile} │[+] installation Completed                                │ \e[0m"
+echo -e "${jeshile} └──────────────────────────────────────────────────────────┘ \e[0m"
 echo " "
 sleep 8
 reboot
 echo " "
 echo -e "${jeshile} ┌───────────────────────┐ \e[0m"
-echo -e "${jeshile} │[R]  Restart VPS...  │ \e[0m"
+echo -e "${jeshile} │[R]  Rebooting VPS...  │ \e[0m"
 echo -e "${jeshile} └───────────────────────┘ \e[0m"
 echo " "
+

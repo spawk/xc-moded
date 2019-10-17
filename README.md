@@ -3,7 +3,6 @@ XC-Moded
 
 Pour l'install juste tapé le code suivant :
 
-sudo apt-get update && sudo apt-get upgrade -y
 
 
 

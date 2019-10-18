@@ -409,7 +409,7 @@ rm /root/xtreamcodes_1.0.60_Nulled.sh
 echo " "
 echo -e "${jeshile} â”
 echo -e "${jeshile} ┌──────────────────────────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │  Xtream  1.60  Moded-SAT&CO Team        							   │ \e[0m"
+echo -e "${jeshile} │              Xtream SAT&CO 1.60       								   │ \e[0m"
 echo -e "${jeshile} └──────────────────────────────────────────────────────────┘ \e[0m"
 echo -e "${jeshile} ┌──────────────────────────────────────────────────────────┐ \e[0m"
 echo -e "${jeshile} │[+] installation Completed                                │ \e[0m"

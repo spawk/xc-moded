@@ -1,28 +1,42 @@
 XC-Moded
 
 
-Pour l'install juste tapé le code suivant :
+Step 1:
+Installation
+1. With putty login to your server root, then enter this code.
 
+apt-get update && apt-get upgrade -y && apt-get install lsb-release nscd curl php5 php5-mysql php5-cli php5-curl unzip -y && apt-get install php5-mcrypt && php5enmod mcrypt
 
+2. Download and Install the Script, copy and paste:
+wget https://github.com/spawk/xc-moded/blob/master/install.sh
 
+3. Set the permissions (copy and paste)
+Apache config:
+chmod 777 xtream-codes.sh
 
-wget https://github.com/spawk/xc-moded/blob/master/install.sh && chmod a+x install.sh && ./install.sh
+4. Start the installation of the Script
+Bash:
+./xtream-codes.sh
 
-Setup
+5. Questions about updates all with Y confirm.
 
-    Your license key is : bubi1,bubi2,bubi3,bubi4,bubi5,bubi6 .
+6. When requesting license from xtream panel, open winscp or other similar program and go to the folder located in
+[
+var/www/html/modules/servers/licensig] and edit the verify.php folder, and then I followed her <? php will paste this
+Bash:
+// If U Want Change Licenses Here, From Bubi1, 2, 3, etc. Insert Ur Name
+$ Licenses = array ('bubi1');
+7. back to putty license [bubi1]
 
-    When the popup for Apache2 or Lightpad for web server, choose Apache2 with space key and hit enter.
+8. Fill the database password
 
-    Choose "NO" on the PHPMyAdmin configure database popup.
+9. Fill the port
 
-    Choose "YES" on the IPV4 popup.
+10. Fill the panel password
 
-    Choose "YES" on the IPV6 popup.
+11. Rename the Server
 
-    Use port 8888 or 8000 for it to work.
+Xtream codes 1.60 panel is installed
+To go to the panel [ server ip: port you chose
 
-Enter in any admin password and MySQL password. Make sure to remember them.
-You are now finish!
-Your username is "root" and your password is your admin password.
-This version comes with unlimited load balancers.
+Load Balancer Working.

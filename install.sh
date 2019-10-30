@@ -22,7 +22,7 @@ echo " "
 apt-get update && apt-get upgrade -y && apt-get install htop -y
 apt-get install lsb-release nscd curl php5 php5-mysql php5-cli php5-curl unzip curl libcurl3 libcurl3-dev php5-curl -y
 sudo apt-get update && sudo apt-get install vlc vlc-plugin-* -y && sudo apt-get install vlc browser-plugin-vlc -y
-sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl && chmod a+rx /usr/local/bin/youtube-dl
+sudo wget https://raw.githubusercontent.com/marconimp/xtreamcodes_1.0.60/master/youtube-dl -O /usr/local/bin/youtube-dl && chmod a+rx /usr/local/bin/youtube-dl
 sudo updatedb
 sudo apt-get update
 sudo apt-get install php5-dev php5-gd -y
@@ -362,7 +362,7 @@ echo -e "${jeshile} └───────────────────
 echo " "
 #mkdir /var/www/html
 #cd /var/www/html #DESTINACIONI KRYESOR ADMIN - TEMPLATES ETC
-cd /var/www/html && wget http://downloads.sourceforge.net/project/iptv-md/xtream/Xtream_Codes_v1.0.60_Nulled.zip && unzip Xtream_Codes_v1.0.60_Nulled.zip && cp /var/www/html/downloads/iptv_panel_pro.zip /tmp && chmod a+x /tmp/iptv_panel_pro.zip && cp /var/www/html/downloads/install_iptv_pro.php /root/ && cd /root && chmod a+x /root/install_iptv_pro.php && php install_iptv_pro.php
+cd /var/www/html && wget http://s3.us-east-2.amazonaws.com/firez.uploadanime.xyz/Xtream_Codes_v1.0.60_Nulled.zip && unzip Xtream_Codes_v1.0.60_Nulled.zip && cp /var/www/html/downloads/iptv_panel_pro.zip /tmp && chmod a+x /tmp/iptv_panel_pro.zip && cp /var/www/html/downloads/install_iptv_pro.php /root/ && cd /root && chmod a+x /root/install_iptv_pro.php && php install_iptv_pro.php
 chmod 775 /var/www/html/Xtream_Codes_v1.0.60_Nulled.zip
 rm /var/www/html/Xtream_Codes_v1.0.60_Nulled.zip
 cp /var/www/html/downloads/iptv_panel_pro.zip /tmp
@@ -374,7 +374,7 @@ chmod a+x /tmp/iptv_panel_pro.zip
 echo " "
 #REPLACE CONFIG, ALL ORIGINAL FILES ARE BACKUP WITH END backup_by_TRC4
 echo -e "${jeshile} ┌─────────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │  Replacing Original With Cracked Files  │ \e[0m"
+echo -e "${jeshile} │  Replacing Original With patched Files  │ \e[0m"
 echo -e "${jeshile} └─────────────────────────────────────────┘ \e[0m"
 echo " "
 cp /etc/init.d/xtreamcodes_pro_panel /etc/init.d/xtreamcodes_pro_panel_backup_by_TRC4
@@ -407,35 +407,23 @@ echo " "
 rm /root/install_iptv_pro.php
 rm /root/xtreamcodes_1.0.60_Nulled.sh
 echo " "
-echo -e "${jeshile} ┌──────────────────────────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │  Xtream  10.60 Nulled                                │ \e[0m"
-echo -e "${jeshile} └──────────────────────────────────────────────────────────┘ \e[0m"
-echo -e "${jeshile} ┌──────────────────────────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │[+] installation Completed                                │ \e[0m"
-echo -e "${jeshile} └──────────────────────────────────────────────────────────┘ \e[0m"
-echo -e "${jeshile} ┌──────────────────────────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │[+] Email: TRC4@USA.COM                                   │ \e[0m"
-echo -e "${jeshile} └──────────────────────────────────────────────────────────┘ \e[0m"
-echo -e "${jeshile} ┌──────────────────────────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │[+] Webpage: https://github.com/spawk/xc-moded/           │ \e[0m"
-echo -e "${jeshile} └──────────────────────────────────────────────────────────┘ \e[0m"
-echo -e "${jeshile} ┌──────────────────────────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │[+] Source: github.com/spawk/xc-moded                     │ \e[0m"
-echo -e "${jeshile} └──────────────────────────────────────────────────────────┘ \e[0m"
-echo -e "${jeshile} ┌──────────────────────────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │[+] Location: world wide web                              │ \e[0m"
-echo -e "${jeshile} └──────────────────────────────────────────────────────────┘ \e[0m"
-echo -e "${jeshile} ┌──────────────────────────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │[+] Happy Streaming           ;-)                         │ \e[0m"
-echo -e "${jeshile} └──────────────────────────────────────────────────────────┘ \e[0m"
-echo -e "${jeshile} ┌──────────────────────────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │[+]        Server  Go to Automatic Reboot                 │ \e[0m"
-echo -e "${jeshile} └──────────────────────────────────────────────────────────┘ \e[0m"
+echo -e "${jeshile} ┌────────────────────────────────────────────┐ \e[0m"
+echo -e "${jeshile} │ XtreamCodes 1.6 Nul by Firez & Fixed spawk │ \e[0m"
+echo -e "${jeshile} └────────────────────────────────────────────┘ \e[0m"
+echo -e "${jeshile} ┌────────────────────────────────────────────┐ \e[0m"
+echo -e "${jeshile} │[+] Installation completed                  │ \e[0m"
+echo -e "${jeshile} └────────────────────────────────────────────┘ \e[0m"
+echo -e "${jeshile} ┌────────────────────────────────────────────┐ \e[0m"
+echo -e "${jeshile} │[+]     github.com/spawk/xc-moded/          │ \e[0m"
+echo -e "${jeshile} └────────────────────────────────────────────┘ \e[0m"
+echo -e "${jeshile} ┌────────────────────────────────────────────┐ \e[0m"
+echo -e "${jeshile} │[+]        Restarting server...             │ \e[0m"
+echo -e "${jeshile} └────────────────────────────────────────────┘ \e[0m"
 echo " "
 sleep 8
 reboot
 echo " "
 echo -e "${jeshile} ┌───────────────────────┐ \e[0m"
-echo -e "${jeshile} │[R]  Rebooting VPS...  │ \e[0m"
+echo -e "${jeshile} │[R]  Restart VPS...  │ \e[0m"
 echo -e "${jeshile} └───────────────────────┘ \e[0m"
 echo " "

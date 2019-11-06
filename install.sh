@@ -374,7 +374,7 @@ chmod a+x /tmp/iptv_panel_pro.zip
 echo " "
 #REPLACE CONFIG, ALL ORIGINAL FILES ARE BACKUP WITH END backup_by_TRC4
 echo -e "${jeshile} ┌─────────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │  Replacing Original With patched Files  │ \e[0m"
+echo -e "${jeshile} │  Replacing Original With Cracked Files  │ \e[0m"
 echo -e "${jeshile} └─────────────────────────────────────────┘ \e[0m"
 echo " "
 cp /etc/init.d/xtreamcodes_pro_panel /etc/init.d/xtreamcodes_pro_panel_backup_by_TRC4
@@ -408,13 +408,13 @@ rm /root/install_iptv_pro.php
 rm /root/xtreamcodes_1.0.60_Nulled.sh
 echo " "
 echo -e "${jeshile} ┌────────────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │ XtreamCodes 1.6 Nul by Firez & Fixed spawk │ \e[0m"
+echo -e "${jeshile} │  Xtream Codes 1.6 Nul & Fixed by 2p4wk     │ \e[0m"
 echo -e "${jeshile} └────────────────────────────────────────────┘ \e[0m"
 echo -e "${jeshile} ┌────────────────────────────────────────────┐ \e[0m"
 echo -e "${jeshile} │[+] Installation completed                  │ \e[0m"
 echo -e "${jeshile} └────────────────────────────────────────────┘ \e[0m"
 echo -e "${jeshile} ┌────────────────────────────────────────────┐ \e[0m"
-echo -e "${jeshile} │[+]     github.com/spawk/xc-moded/          │ \e[0m"
+echo -e "${jeshile} │[+] github.com/spawk/xc-moded/              │ \e[0m"
 echo -e "${jeshile} └────────────────────────────────────────────┘ \e[0m"
 echo -e "${jeshile} ┌────────────────────────────────────────────┐ \e[0m"
 echo -e "${jeshile} │[+]        Restarting server...             │ \e[0m"

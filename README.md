@@ -5,7 +5,7 @@ Step 1:
 Installation
 1. With putty login to your server root, then enter this code.
 
-wget https://github.com/spawk/xc-moded/blob/master/install.sh && chmod a+x install.sh  && ./install.sh 
+wget https://github.com/spawk/xc-moded/blob/master/install.sh && chmod a+x install.sh && ./install.sh 
 
 
 
